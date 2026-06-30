@@ -422,7 +422,7 @@
       var img = card.querySelector('img');
       var rg = card.querySelector('.pcard-rg');
       var ds = card.querySelector('.pcard-ds');
-      if (img) { img.src = data.logo; img.alt = val; }
+      if (img) { img.src = data.logo; img.alt = val === 'fpt' ? 'FPT IS' : val; }
       if (rg) rg.textContent = data.region;
       if (ds) ds.textContent = data.desc;
     }
