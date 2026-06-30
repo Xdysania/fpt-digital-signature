@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>请选择数字签名供应商进行签署 — NotaSign</title>
+<link rel="stylesheet" href="../fpt-design.css"/>
+<script src="../fpt-common.js" defer></script>
+</head>
+<body class="page-modal-only">
+
+<!-- CA 选择弹窗（仅蒙层 + 弹窗） -->
+<div class="ovl ovl--fullpage" id="ovl-ca">
+<div class="modal" id="modal-ca" role="dialog" aria-modal="true" aria-labelledby="mt-ca">
+<div class="modal-h"><h2 class="modal-tt" id="mt-ca">请选择数字签名供应商进行签署</h2>
+<button class="modal-x" type="button" aria-label="关闭" id="mclose-ca">
+<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+</button></div>
+<div class="modal-stack">
+<div class="modal-b">
+<div class="modal-row">
+<div class="swrap" id="sel-sign" data-value="fpt">
+<button type="button" class="strg" aria-haspopup="listbox" aria-expanded="false" id="strg-sign">
+<span class="strg-v" id="sv-sign">FPT Digital Signature</span>
+<svg class="strg-c" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4.5 6L8 9.5L11.5 6" stroke="#A2A1A9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<div class="smen" role="listbox" hidden id="smen-sign">
+<button type="button" class="sopt is-sel" role="option" data-value="fpt" aria-selected="true"><span>FPT Digital Signature</span></button>
+<button type="button" class="sopt" role="option" data-value="intesi" aria-selected="false"><span>Intesi Digital Signature</span></button>
+<button type="button" class="sopt" role="option" data-value="cloud" aria-selected="false"><span>Cloud Digital Signature</span></button>
+</div></div></div>
+<div class="modal-b2">
+<div class="pcard" id="pcard">
+<div class="pcard-ct">
+<div class="pcard-lg"><img src="../assets/images/fpt-is-logo.svg" alt="FPT IS" width="117" height="58"/></div>
+<p class="pcard-rg">支持国家/区域：越南</p>
+<p class="pcard-ds">FPT 是越南本地数字签名认证服务提供商，提供个人与企业数字签名、数字证书及身份认证服务，支持电子合同、税务、海关、电子发票、社保等越南本地合规交易场景。</p>
+</div></div>
+<span class="slink">如需更多信息，请访问 <span class="slink-b">Nota Sign 支持中心</span></span>
+</div></div>
+<div class="modal-f">
+<button type="button" class="btn btn-s" id="btn-cancel">取消</button>
+<a href="auth-info.html" class="btn btn-p">下一步</a>
+</div></div></div></div>
+
+<script>
+document.getElementById('modal-ca').addEventListener('click',function(e){e.stopPropagation()});
+document.getElementById('btn-cancel').addEventListener('click',function(){window.location.href='../index.html'});
+document.getElementById('mclose-ca').addEventListener('click',function(){window.location.href='../index.html'});
+</script>
+</body>
+</html>

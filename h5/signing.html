@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>文档签署 — NotaSign</title>
+<link rel="stylesheet" href="../fpt-h5.css"/>
+<script src="../fpt-common.js" defer></script>
+</head>
+<body class="h5-body">
+<div class="h5-phone" id="h5-app">
+
+<div class="h5-top-bar">
+<div class="h5-status-bar">
+<span class="h5-status-bar__time">9:41</span>
+<div class="h5-status-bar__icons">
+<img src="../assets/h5/icons/status-cellular.svg" alt="" width="17" height="11"/>
+<img src="../assets/h5/icons/status-wifi.svg" alt="" width="15" height="11"/>
+<img src="../assets/h5/icons/status-battery.svg" alt="" width="24" height="11"/>
+</div>
+</div>
+<div class="h5-nav-bar">
+<div class="h5-nav-bar__divider"></div>
+<span class="h5-nav-bar__title">文档签署</span>
+</div>
+</div>
+
+<div class="h5-toolbar">
+<button class="h5-toolbar__submit" type="button" id="h5-submit">提 交</button>
+<button class="h5-toolbar__more" type="button" id="h5-more" aria-label="更多操作">
+<img src="../assets/h5/icons/icon-3dot.svg" alt=""/>
+</button>
+</div>
+
+<div class="h5-content">
+<div class="h5-content__hint">请点击文档添加签章</div>
+<img class="h5-content__union-white" src="../assets/h5/union-white.svg" alt=""/>
+<img class="h5-content__union-purple" src="../assets/h5/union-purple.svg" alt=""/>
+<div class="h5-content__doc">
+<img src="../assets/images/doc-preview-h5.png" alt="合同文档"/>
+</div>
+<div class="h5-content__doc-info">
+<span class="h5-content__doc-name">销售合同英文版.pdf</span>
+<span class="h5-content__doc-page">1/24</span>
+</div>
+<div class="h5-sig-dropdown" id="h5-sig-dropdown">
+<button type="button" class="h5-sig-dropdown__item">
+<span class="h5-sig-dropdown__icon"><img src="../assets/h5/icons/icon-signature-filled.svg" alt=""/></span>
+<span>签名</span>
+</button>
+<button type="button" class="h5-sig-dropdown__item">
+<span class="h5-sig-dropdown__icon"><img src="../assets/h5/icons/icon-seal.svg" alt=""/></span>
+<span>印章</span>
+</button>
+<button type="button" class="h5-sig-dropdown__item">
+<span class="h5-sig-dropdown__icon"><img src="../assets/h5/icons/icon-date.svg" alt=""/></span>
+<span>签署日期</span>
+</button>
+</div>
+</div>
+
+<div class="h5-overlay" id="h5-overlay"></div>
+
+<div class="h5-panel" id="h5-panel">
+<div class="h5-panel__header">
+<span class="h5-panel__title">请选择数字签名供应商进行签署</span>
+<button class="h5-panel__close" type="button" id="h5-close" aria-label="关闭">
+<img src="../assets/h5/icons/icon-close.svg" alt=""/>
+</button>
+</div>
+<div class="h5-panel__body">
+<div class="h5-panel__body-inner">
+<div class="h5-supplier-select h5-supplier-select--picker" id="h5-supplier-select" data-value="fpt" data-picker-sheet="h5-supplier-picker">
+<button type="button" class="h5-supplier-select__trigger" id="h5-supplier-trigger" aria-haspopup="dialog" aria-expanded="false">
+<span class="h5-supplier-select__value" id="h5-supplier-value">FPT Digital Signature</span>
+<img class="h5-supplier-select__chevron" src="../assets/h5/icons/icon-chevron-down.svg" alt=""/>
+</button>
+</div>
+<div class="h5-supplier-card" id="h5-supplier-card">
+<div class="h5-supplier-card__content">
+<div class="h5-supplier-card__logo"><img src="../assets/images/fpt-is-logo.svg" alt="FPT IS"/></div>
+<p class="h5-supplier-card__region" id="h5-supplier-region">支持国家/区域：越南</p>
+<p class="h5-supplier-card__desc" id="h5-supplier-desc">FPT 是越南本地数字签名认证服务提供商，提供个人与企业数字签名、数字证书及身份认证服务，支持电子合同、税务、海关、电子发票、社保等越南本地合规交易场景。</p>
+</div>
+</div>
+<p class="h5-panel__support h5-panel__support--inline">如需更多信息，请访问 <span class="h5-panel__support-link">Nota Sign 支持中心</span></p>
+</div>
+</div>
+<div class="h5-panel__footer">
+<button type="button" class="h5-panel__btn" id="h5-next">下一步</button>
+</div>
+</div>
+
+<div class="h5-picker-sheet" id="h5-supplier-picker" hidden>
+<button type="button" class="h5-picker-sheet__mask" id="h5-supplier-picker-mask" aria-label="关闭"></button>
+<div class="h5-picker-sheet__sheet" role="dialog" aria-modal="true" aria-labelledby="h5-supplier-picker-title">
+<div class="h5-picker-sheet__header">
+<span class="h5-picker-sheet__title" id="h5-supplier-picker-title">请选择数字签名供应商</span>
+</div>
+<div class="h5-picker-sheet__body">
+<div class="h5-radio-list h5-radio-list--picker" id="h5-supplier-picker-list" role="radiogroup" aria-label="数字签名供应商" data-value="fpt">
+<button type="button" class="h5-radio-list__item is-selected" role="radio" aria-checked="true" data-value="fpt">
+<span class="h5-radio-list__icon" aria-hidden="true"><img src="../assets/h5/icons/icon-radio-selected.svg" alt="" width="16" height="16"/></span>
+<span class="h5-radio-list__label">FPT Digital Signature</span>
+</button>
+<button type="button" class="h5-radio-list__item" role="radio" aria-checked="false" data-value="intesi">
+<span class="h5-radio-list__icon" aria-hidden="true"><img src="../assets/h5/icons/icon-radio-unselected.svg" alt="" width="16" height="16"/></span>
+<span class="h5-radio-list__label">Intesi Digital Signature</span>
+</button>
+<button type="button" class="h5-radio-list__item" role="radio" aria-checked="false" data-value="cloud">
+<span class="h5-radio-list__icon" aria-hidden="true"><img src="../assets/h5/icons/icon-radio-unselected.svg" alt="" width="16" height="16"/></span>
+<span class="h5-radio-list__label">Cloud Digital Signature</span>
+</button>
+</div>
+</div>
+<div class="h5-picker-sheet__footer">
+<button type="button" class="h5-panel__btn" id="h5-supplier-picker-confirm">确定</button>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>FPT 数字证书认证信息 — NotaSign</title>
+<link rel="stylesheet" href="../fpt-h5.css"/>
+<script src="../fpt-common.js" defer></script>
+</head>
+<body class="h5-body">
+<div class="h5-phone" id="h5-app">
+
+<div class="h5-top-bar">
+<div class="h5-status-bar">
+<span class="h5-status-bar__time">9:41</span>
+<div class="h5-status-bar__icons">
+<img src="../assets/h5/icons/status-cellular.svg" alt="" width="17" height="11"/>
+<img src="../assets/h5/icons/status-wifi.svg" alt="" width="15" height="11"/>
+<img src="../assets/h5/icons/status-battery.svg" alt="" width="24" height="11"/>
+</div>
+</div>
+<div class="h5-nav-bar">
+<div class="h5-nav-bar__divider"></div>
+<span class="h5-nav-bar__title">文档签署</span>
+</div>
+</div>
+
+<div class="h5-toolbar">
+<button class="h5-toolbar__submit" type="button">提 交</button>
+<button class="h5-toolbar__more" type="button" aria-label="更多操作">
+<img src="../assets/h5/icons/icon-3dot.svg" alt=""/>
+</button>
+</div>
+
+<div class="h5-content">
+<div class="h5-content__hint">请点击文档添加签章</div>
+<img class="h5-content__union-white" src="../assets/h5/union-white.svg" alt=""/>
+<img class="h5-content__union-purple" src="../assets/h5/union-purple.svg" alt=""/>
+<div class="h5-content__doc">
+<img src="../assets/images/doc-preview-h5.png" alt="合同文档"/>
+</div>
+<div class="h5-content__doc-info">
+<span class="h5-content__doc-name">销售合同英文版.pdf</span>
+<span class="h5-content__doc-page">1/24</span>
+</div>
+</div>
+
+<div class="h5-overlay"></div>
+
+<div class="h5-panel h5-panel--auth">
+<div class="h5-panel__header">
+<span class="h5-panel__title">FPT 数字证书认证信息</span>
+<button type="button" class="h5-panel__close" id="h5-auth-close" aria-label="关闭">
+<img src="../assets/h5/icons/icon-close.svg" alt=""/>
+</button>
+</div>
+
+<div class="h5-panel__body">
+<div class="h5-verify-body">
+<p class="h5-verify-body__desc">请确认用于申请 FPT 短期数字证书的身份信息。提交后将跳转至 FPT SIC Web 完成证件照片上传与人脸识别。</p>
+
+<div class="h5-verify-field">
+<span class="h5-verify-field__label">证件姓名</span>
+<input type="text" class="h5-verify-field__input" placeholder="请输入证件姓名"/>
+</div>
+
+<div class="h5-verify-field">
+<span class="h5-verify-field__label">证件类型</span>
+<div class="h5-supplier-select h5-supplier-select--picker" id="h5-id-type-select" data-value="personal-id" data-picker-sheet="h5-id-type-picker">
+<button type="button" class="h5-supplier-select__trigger" aria-haspopup="dialog" aria-expanded="false">
+<span class="h5-supplier-select__value">Personal ID / 个人身份号码</span>
+<img class="h5-supplier-select__chevron" src="../assets/h5/icons/icon-chevron-down.svg" alt=""/>
+</button>
+</div>
+</div>
+
+<div class="h5-verify-field">
+<span class="h5-verify-field__label">证件 ID</span>
+<input type="text" class="h5-verify-field__input" placeholder="请输入证件号码"/>
+</div>
+
+<div class="h5-verify-method-group">
+<span class="h5-verify-method-group__title">认证联系方式</span>
+<div class="h5-verify-method-cards">
+<button type="button" class="h5-verify-method-card is-sel" data-fpt-method="email" aria-checked="true">
+<img class="h5-verify-method-card__radio" src="../assets/h5/icons/icon-radio-selected.svg" alt="" width="14" height="14"/>
+<span>邮箱</span>
+</button>
+<button type="button" class="h5-verify-method-card" data-fpt-method="phone" aria-checked="false">
+<img class="h5-verify-method-card__radio" src="../assets/h5/icons/icon-radio-unselected.svg" alt="" width="14" height="14"/>
+<span>手机</span>
+</button>
+</div>
+</div>
+
+<div class="h5-verify-field" data-fpt-email-field>
+<span class="h5-verify-field__label">邮箱地址</span>
+<input type="email" class="h5-verify-field__input" placeholder="请输入邮箱地址"/>
+</div>
+
+<div class="h5-verify-field" data-fpt-phone-field hidden>
+<span class="h5-verify-field__label">手机号码</span>
+<div class="h5-phone-combo">
+<span class="h5-phone-combo__prefix" aria-hidden="true">+84</span>
+<input type="tel" class="h5-phone-combo__input" placeholder="请输入手机号码" aria-label="手机号码"/>
+</div>
+</div>
+</div>
+</div>
+
+<div class="h5-panel__footer h5-panel__footer--auth">
+<button type="button" class="h5-panel__btn" id="h5-auth-submit">继续认证</button>
+</div>
+</div>
+
+<div class="h5-picker-sheet" id="h5-id-type-picker" hidden>
+<button type="button" class="h5-picker-sheet__mask" aria-label="关闭"></button>
+<div class="h5-picker-sheet__sheet" role="dialog" aria-modal="true" aria-labelledby="h5-id-type-picker-title">
+<div class="h5-picker-sheet__header">
+<span class="h5-picker-sheet__title" id="h5-id-type-picker-title">请选择证件类型</span>
+</div>
+<div class="h5-picker-sheet__body">
+<div class="h5-radio-list h5-radio-list--picker" role="radiogroup" aria-label="证件类型" data-value="personal-id">
+<button type="button" class="h5-radio-list__item is-selected" role="radio" aria-checked="true" data-value="personal-id">
+<span class="h5-radio-list__icon" aria-hidden="true"><img src="../assets/h5/icons/icon-radio-selected.svg" alt="" width="16" height="16"/></span>
+<span class="h5-radio-list__label">Personal ID / 个人身份号码</span>
+</button>
+<button type="button" class="h5-radio-list__item" role="radio" aria-checked="false" data-value="citizen-id">
+<span class="h5-radio-list__icon" aria-hidden="true"><img src="../assets/h5/icons/icon-radio-unselected.svg" alt="" width="16" height="16"/></span>
+<span class="h5-radio-list__label">Citizen ID / 公民身份证</span>
+</button>
+<button type="button" class="h5-radio-list__item" role="radio" aria-checked="false" data-value="passport">
+<span class="h5-radio-list__icon" aria-hidden="true"><img src="../assets/h5/icons/icon-radio-unselected.svg" alt="" width="16" height="16"/></span>
+<span class="h5-radio-list__label">Passport / 护照</span>
+</button>
+</div>
+</div>
+<div class="h5-picker-sheet__footer">
+<button type="button" class="h5-panel__btn" id="h5-id-type-picker-confirm">确定</button>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

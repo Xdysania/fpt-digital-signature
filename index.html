@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FPT 数字签名 — 页面导航</title>
+<link rel="stylesheet" href="fpt-design.css"/>
+</head>
+<body class="fpt-index-body" style="display:block;background:#E8E8E8">
+<div class="fpt-index"><div class="fpt-index__wrap">
+<h1>FPT Digital Signature 页面原型</h1>
+<p>基于 Figma <a href="https://www.figma.com/design/9pfFiMwd0eC1EOMBOjDzsJ/%E5%85%A8%E7%90%83%E7%AD%BE%E4%BA%A7%E5%93%81%E8%BF%AD%E4%BB%A3?node-id=23045-6229" target="_blank" rel="noopener">node 23045:6229</a>（Intesi CA OTP 同类型设计）像素级还原；异常页遵循 <a href="https://www.figma.com/design/9pfFiMwd0eC1EOMBOjDzsJ/%E5%85%A8%E7%90%83%E7%AD%BE%E4%BA%A7%E5%93%81%E8%BF%AD%E4%BB%A3?node-id=19387-152" target="_blank" rel="noopener">node 19387:152</a> 规范。</p>
+
+<h2>PC Web</h2>
+<div class="fpt-index__grid">
+<a href="pc/signing.html"><strong>签署页 + CA 选择弹窗</strong><span>全屏蒙层 + 525px CA 选择弹窗</span></a>
+<a href="pc/auth-info.html"><strong>FPT 数字证书认证信息弹窗</strong><span>全屏蒙层 + 525px 认证表单弹窗</span></a>
+<a href="pc/cert-querying.html"><strong>证书结果查询中</strong><span>全屏状态页 · 查询 CA Hub</span></a>
+<a href="pc/cert-failed.html"><strong>证书申请失败</strong><span>全屏异常页 · 返回文档 / 重新申请</span></a>
+<a href="pc/sign-processing.html"><strong>签署结果处理中</strong><span>全屏状态页 · 获取签名值并封装 PDF</span></a>
+<a href="pc/sign-failed.html"><strong>签署失败</strong><span>全屏异常页 · 返回文档 / 重新签署</span></a>
+</div>
+
+<h2>H5</h2>
+<div class="fpt-index__grid">
+<a href="h5/login-cancelled.html"><strong>H5 登录已取消</strong><span>Figma 19387:152 异常页规范</span></a>
+<a href="h5/signing.html"><strong>H5 签署 + 底部弹层</strong><span>375×812 参考 Intesi 移动端 · CA 选择底部面板</span></a>
+<a href="h5/auth-info.html"><strong>H5 FPT 数字证书认证信息</strong><span>签署画布 + 认证信息滑入面板</span></a>
+<a href="h5/cert-querying.html"><strong>H5 证书查询中</strong></a>
+<a href="h5/cert-failed.html"><strong>H5 证书申请失败</strong></a>
+<a href="h5/sign-processing.html"><strong>H5 签署处理中</strong></a>
+<a href="h5/sign-failed.html"><strong>H5 签署失败</strong></a>
+</div>
+</div></div>
+</body>
+</html>

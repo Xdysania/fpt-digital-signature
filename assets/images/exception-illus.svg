@@ -1,0 +1,23 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="exc-grad-header" x1="21" y1="29.68" x2="129" y2="29.68" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9F36D5"/>
+      <stop offset="1" stop-color="#13AD7C"/>
+    </linearGradient>
+    <linearGradient id="exc-grad-body" x1="21" y1="76.93" x2="129" y2="76.93" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9F36D5"/>
+      <stop offset="1" stop-color="#13AD7C"/>
+    </linearGradient>
+    <linearGradient id="exc-grad-icon" x1="63.44" y1="67.36" x2="87.44" y2="67.36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9F36D5"/>
+      <stop offset="1" stop-color="#13AD7C"/>
+    </linearGradient>
+  </defs>
+  <path opacity="0.1" d="M21 32.57H129V121.28C129 125.54 125.55 129 121.29 129H28.71C24.45 129 21 125.54 21 121.28V32.57Z" fill="url(#exc-grad-body)"/>
+  <path d="M28.71 21H121.29C125.55 21 129 24.45 129 28.71V38.36H21V28.71C21 24.45 24.45 21 28.71 21Z" fill="url(#exc-grad-header)"/>
+  <path d="M114.86 50H36.86C34.73 50 33 51.73 33 53.86V80.86C33 82.99 34.73 84.71 36.86 84.71H114.86C116.97 84.71 118.71 82.99 118.71 80.86V53.86C118.71 51.73 116.97 50 114.86 50Z" fill="#FDFDFD"/>
+  <path d="M75.44 55.36C68.81 55.36 63.44 60.73 63.44 67.36C63.44 73.99 68.81 79.36 75.44 79.36C82.07 79.36 87.44 73.99 87.44 67.36C87.44 60.73 82.07 55.36 75.44 55.36Z" fill="url(#exc-grad-icon)"/>
+  <path d="M74.24 70.96V73.36H76.64V70.96H74.24ZM74.24 61.36V68.56H76.64V61.36H74.24Z" fill="#FFFFFF"/>
+  <path d="M59.57 100.35H88.22C89.44 100.35 90.43 101.34 90.43 102.56C90.43 103.78 89.44 104.76 88.22 104.76H59.57C58.35 104.76 57.36 103.78 57.36 102.56C57.36 101.34 58.35 100.35 59.57 100.35Z" fill="#FAFCFC"/>
+  <path d="M35.32 111.36H101.44C102.66 111.36 103.65 112.35 103.65 113.57C103.65 114.79 102.66 115.77 101.44 115.77H35.32C34.1 115.77 33.12 114.79 33.12 113.57C33.12 112.35 34.1 111.36 35.32 111.36Z" fill="#FAFCFC"/>
+</svg>
